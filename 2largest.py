@@ -29,20 +29,37 @@ def find_largest(num1, num2, num3):
 
 st.title("Find the Largest Number")
 
-# Get user input for the three numbers using the get_number_input function
+# Option 1: Using a loop for user input handling (choose one option)
+
+# while True:  # Introduce a loop for user input handling
+#     num1 = get_number_input("Enter the first number:")
+#     if num1 is not None:  # Check if valid input (not None)
+#         break  # Exit the loop if valid input received
+
+#     # Display error message (optional)
+
+#     # Continue to the next iteration if invalid input entered
+
+# Option 2: Using conditional logic (if statements)
+
 num1 = get_number_input("Enter the first number:")
-if num1 is None:  # Handle cases where user enters an invalid value
-    continue  # Skip to the next input field if an error occurred
+if num1 is None:
+    st.error("Please enter a valid number.")
 
 num2 = get_number_input("Enter the second number:")
 if num2 is None:
-    continue
+    st.error("Please enter a valid number.")
 
 num3 = get_number_input("Enter the third number:")
 if num3 is None:
-    continue
+    st.error("Please enter a valid number.")
 
-# Call the function to find the largest number
+# ... (rest of the code to find and display the largest number)
+
+# If using Option 1, uncomment the lines inside the loop and comment out
+# the lines below this point.
+
+# Call the function to find the largest number (assuming valid inputs now)
 largest_number = find_largest(num1, num2, num3)
 
 # Display the result
